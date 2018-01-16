@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FastEC.iml" filepath="$PROJECT_DIR$/FastEC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yanbi-annotations/yanbi-annotations.iml" filepath="$PROJECT_DIR$/yanbi-annotations/yanbi-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yanbi-complier/yanbi-complier.iml" filepath="$PROJECT_DIR$/yanbi-complier/yanbi-complier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yanbi-core/yanbi-core.iml" filepath="$PROJECT_DIR$/yanbi-core/yanbi-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yanbi-ec/yanbi-ec.iml" filepath="$PROJECT_DIR$/yanbi-ec/yanbi-ec.iml" />
+    </modules>
+  </component>
+</project>
