@@ -1,6 +1,7 @@
 package sicau.xxgc.yanbi.app;
 
 import android.content.Context;
+import android.os.Handler;
 
 import java.util.WeakHashMap;
 
@@ -11,12 +12,28 @@ import java.util.WeakHashMap;
 public final class Yanbi{
 
     public static Configurator init(Context context){
-        getConfigurations().put(ConfigType.APPLICATION_CONTEXT.name(),context.getApplicationContext());
+        getConfigurations().put(ConfigKeys.APPLICATION_CONTEXT.name(),context.getApplicationContext());
+        return Configurator.getInstance();
+    }
+    //获得配置
+    public static WeakHashMap<Object,Object> getConfigurations(){
+        return Configurator.getInstance().getYanbiConfigs();
+    }
+
+    public static Configurator getConfigurator(){
         return Configurator.getInstance();
     }
 
-    private static WeakHashMap<String,Object> getConfigurations(){
-        return Configurator.getInstance().getYanbiConfigs();
+    public static <T> T getConfiguration(Object key){
+        return getConfigurator().getConfiguration(key);
+    }
+
+    public static Context getApplicationContext(){
+        return getConfiguration(ConfigType.APPLICATION_CONTEXT.name());
+    }
+
+    public static Handler getHandler(){
+        return getConfiguration(ConfigKeys.HANDLER);
     }
 
 }
